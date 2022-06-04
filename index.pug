@@ -1,0 +1,54 @@
+doctype html
+html(lang="ko")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Matrix Calculator
+    link(rel="stylesheet", href="./css/style.css")
+    link(rel="shortcut icon", href="./images/favicon.ico", type="image/x-icon")
+    link(rel="icon", href="./images/favicon.ico", type="image/x-icon")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css")
+    script(src="./javascript/index.js" defer)
+  body 
+    section.sectionMatrixContainer 
+      .divTopNormalMatrixContainer 
+        .divDisplayMatrixContainer 
+      .divBottomNormalMatrixContainer 
+        h1.h1NormalMatrixTitle FirstMatrix 
+        .divBottomTopNormalMatrixContainer 
+          input.inputNormalMatrixRow(type="text" placeholder="ROW" maxLength="1")
+          input.inputNormalMatrixCol(type="text" placeholder="COL" maxLength="1")
+        .divBottomBottomNormalMatrixContainer 
+          button.buttonCreateNormalMatrix CREATE 
+          button.buttonRandomNormalMatrixContainer 
+            i.fa-solid.fa-dice.iDice 
+          button.buttonDeleteNormalMatrixContainer 
+            i.fa-solid.fa-trash-can.iTrashCan 
+    section.sectionMatrixContainer 
+      .divTopNormalMatrixContainer 
+        .divDisplayMatrixContainer 
+      .divBottomNormalMatrixContainer 
+        h1.h1NormalMatrixTitle FirstMatrix 
+        .divBottomTopNormalMatrixContainer 
+          input.inputNormalMatrixRow(type="text" placeholder="ROW" maxLength="1")
+          input.inputNormalMatrixCol(type="text" placeholder="COL" maxLength="1")
+        .divBottomBottomNormalMatrixContainer 
+          button.buttonCreateNormalMatrix CREATE 
+          button.buttonRandomNormalMatrixContainer 
+            i.fa-solid.fa-dice.iDice 
+          button.buttonDeleteNormalMatrixContainer 
+            i.fa-solid.fa-trash-can.iTrashCan 
+    section.sectionCalcMatrixContainer 
+      .divTopCalcMatrixContainer 
+        h1.h1CalcMatrixTitle Matrix Calculator 
+        h2.h2CalcMatrixAuthor Created by Yejeung Ji, Eunyoung Kim 
+        .divTopCalcMatrixButtonContainer 
+          button.buttonCalcPlus 
+            i.fa-solid.fa-square-plus.iCalcPlus 
+          button.buttonCalcMinus 
+            i.fa-solid.fa-square-minus.iCalcMinus 
+          button.buttonCalcMultiply 
+            i.fa-solid.fa-square-xmark.iCalcMultiply 
+      .divBottomCalcMatrixContainer 
+        .divDisplayCalcMatrixContainer

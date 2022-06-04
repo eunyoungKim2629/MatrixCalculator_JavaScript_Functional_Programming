@@ -1,0 +1,232 @@
+@import 'reset';
+@import 'variable';
+@import 'mixin';
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	@include flexRow;
+	justify-content: center;
+	section {
+		border-radius: 1vw;
+	}
+	section.sectionMatrixContainer {
+		@include flexCol;
+		width: 30%;
+		height: 95%;
+		border: 1px solid black;
+		margin-right: 3vw;
+		.divTopNormalMatrixContainer {
+			width: 100%;
+			height: 65%;
+			margin-bottom: 0.7vw;
+			@include flexRow;
+			.divDisplayMatrixContainer {
+				padding-left: 0.1vw;
+				padding-top: 0.1vw;
+				input.inputMatrixItem {
+					margin-right: 0.1vw;
+					margin-bottom: 0.1vw;
+					width: 3.1vw;
+					height: 3.1vw;
+					border: 1px solid black;
+					border-radius: 0.3vw;
+					text-align: center;
+					font-size: 1vw;
+				}
+			}
+		}
+		.divBottomNormalMatrixContainer {
+			width: 100%;
+			height: 35%;
+			@include flexCol;
+			h1.h1NormalMatrixTitle {
+				width: 100%;
+				font-size: 3.5vw;
+				font-family: 'Times New Roman', Times, serif;
+				padding-left: 1vw;
+				margin-bottom: 1vw;
+			}
+			.divBottomTopNormalMatrixContainer {
+				@include flexRow;
+				width: 100%;
+				margin-bottom: 1.5vw;
+				input {
+					width: 13vw;
+					border: 1px solid black;
+					text-align: center;
+					font-size: 2vw;
+					font-family: 'Times New Roman', Times, serif;
+					height: 3.5vw;
+				}
+				input.inputNormalMatrixRow {
+					margin-right: 1.5vw;
+				}
+				input.inputNormalMatrixCol {
+				}
+			}
+			.divBottomBottomNormalMatrixContainer {
+				width: 100%;
+				@include flexRow;
+				margin-bottom: 1.5vw;
+				button.buttonCreateNormalMatrix {
+					display: inline-block;
+					// display: none;
+					width: 27.5vw;
+					height: 5vw;
+					font-size: 3.5vw;
+					font-family: 'Times New Roman', Times, serif;
+					border-radius: 1.5vw;
+					background-color: rgb(123, 91, 145);
+					color: #fafafa;
+					cursor: pointer;
+					transition: all 300ms ease-in-out;
+				}
+				button.buttonCreateNormalMatrix:hover {
+					background-color: rgb(89, 50, 114);
+				}
+				button.buttonRandomNormalMatrixContainer {
+					display: none;
+					// display: inline-block;
+					width: 13.75vw;
+					height: 5vw;
+					border-top-left-radius: 1.5vw;
+					border-bottom-left-radius: 1.5vw;
+					background-color: rgb(123, 91, 145);
+					border-right: 1px solid #fafafa;
+					cursor: pointer;
+					transition: all 300ms ease-in-out;
+					i.iDice {
+						color: #fafafa;
+						font-size: 3.5vw;
+					}
+				}
+				button.buttonRandomNormalMatrix:hover {
+					background-color: rgb(89, 50, 114);
+				}
+				button.buttonDeleteNormalMatrixContainer {
+					display: none;
+					// display: inline-block;
+					width: 13.75vw;
+					height: 5vw;
+					border-top-right-radius: 1.5vw;
+					border-bottom-right-radius: 1.5vw;
+					background-color: rgb(123, 91, 145);
+					cursor: pointer;
+					transition: all 300ms ease-in-out;
+					i.iTrashCan {
+						color: #fafafa;
+						font-size: 3.5vw;
+					}
+				}
+				button.buttonDeleteNormalMatrix:hover {
+					background-color: rgb(89, 50, 114);
+				}
+			}
+		}
+	}
+	section.sectionCalcMatrixContainer {
+		@include flexCol;
+		width: 30%;
+		height: 95%;
+		border: 1px solid black;
+		.divTopCalcMatrixContainer {
+			width: 100%;
+			height: 35%;
+			@include flexCol;
+			margin-bottom: 0.7vw;
+			h1.h1CalcMatrixTitle {
+				width: 100%;
+				text-align: center;
+				font-size: 3.5vw;
+				font-family: 'Times New Roman', Times, serif;
+				margin-bottom: 0.5vw;
+			}
+			h2.h2CalcMatrixAuthor {
+				width: 100%;
+				font-size: 1.3vw;
+				text-align: right;
+				font-family: 'Times New Roman', Times, serif;
+				padding-right: 1vw;
+				margin-bottom: 1.5vw;
+			}
+			.divTopCalcMatrixButtonContainer {
+				@include flexRow;
+				width: 100%;
+				justify-content: center;
+				button {
+					background-color: transparent;
+					margin: 0 1.5vw;
+					i {
+						color: rgb(123, 91, 145);
+						font-size: 6vw;
+						cursor: pointer;
+						transition: all 300ms ease-in-out;
+					}
+					i:hover {
+						color: rgb(89, 50, 114);
+					}
+				}
+			}
+		}
+		.divBottomCalcMatrixContainer {
+			width: 100%;
+			height: 65%;
+			@include flexCol;
+			.divDisplayCalcMatrixContainer {
+				padding-left: 0.1vw;
+				padding-top: 0.1vw;
+				input.inputCalcMatrixItem {
+					margin-right: 0.1vw;
+					margin-bottom: 0.1vw;
+					width: 3.1vw;
+					height: 3.1vw;
+					border: 1px solid black;
+					border-radius: 0.3vw;
+					text-align: center;
+					font-size: 0.9vw;
+				}
+			}
+		}
+	}
+	.divModalWrapperContainer {
+		width: 100%;
+		height: 100%;
+		@include flexRow;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		background-color: rgba($color: #000000, $alpha: 0.7);
+		.divModalContainer {
+			width: 70%;
+			height: 50%;
+			@include flexRow;
+			border: 1px solid #fafafa;
+			position: relative;
+			font-size: 2vw;
+			font-family: 'Times New Roman', Times, serif;
+			border-radius: 1vw;
+			font-weight: bold;
+			color: #fafafa;
+			button.buttonDeleteModalContainer {
+				position: absolute;
+				top: 1vw;
+				right: 1vw;
+				background-color: transparent;
+				border-radius: 50%;
+				cursor: pointer;
+				i.iDeleteModal {
+					font-size: 3vw;
+					color: rgb(220, 22, 22);
+				}
+			}
+		}
+	}
+}
