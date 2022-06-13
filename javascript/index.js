@@ -7,11 +7,15 @@
 	let createMatrixHandler = true;
 
 	const printModal = (message) => {
-		console.log('modal' + message);
+		$('.divModalWrapperContainer').style.display = 'flex';
+		$('.divModalText').textContent = message;
 	};
 
 	const deleteModal = () => {
-		createMatrixHandler = true;
+		$('.iDeleteModal').addEventListener('click',() => {
+			$('.divModalWrapperContainer').style.display = 'none';
+			createMatrixHandler =true;
+		})
 	};
 
 	const confirmBeforeCreateNormalMatrix = (index) => {
@@ -92,6 +96,7 @@
 		clickButtonCalcPlus();
 		clickButtonCalcMinus();
 		clickButtonCalcMultiply();
+		deleteModal();
 	};
 
 	main();
