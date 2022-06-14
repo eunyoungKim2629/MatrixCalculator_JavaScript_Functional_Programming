@@ -12,10 +12,10 @@
 	};
 
 	const deleteModal = () => {
-		$('.iDeleteModal').addEventListener('click',() => {
+		$('.iDeleteModal').addEventListener('click', () => {
 			$('.divModalWrapperContainer').style.display = 'none';
-			createMatrixHandler =true;
-		})
+			createMatrixHandler = true;
+		});
 	};
 
 	const confirmBeforeCreateNormalMatrix = (index) => {
@@ -69,8 +69,21 @@
 		);
 	};
 
+	const generateRandomNum = () => {
+		return Math.floor(Math.random() * 2) ? Math.floor(Math.random() * 100) : -Math.floor(Math.random() * 100)};
+
+	const printRandomNum = (index) =>
+		void $$('.divDisplayMatrixContainer')
+			[index].querySelectorAll('input')
+			.forEach(input => void (input.value = generateRandomNum()));
+
 	const clickButtonRandomNormalMatrixContainer = () => {
-		$$('.buttonRandomNormalMatrixContainer').forEach((button, index) => void button.addEventListener('click', () => {}));
+		$$('.buttonRandomNormalMatrixContainer').forEach(
+			(button, index) =>
+				void button.addEventListener('click', () => {
+					printRandomNum(index);
+				})
+		);
 	};
 
 	const clickButtonDeleteNormalMatrixContainer = () => {
