@@ -86,8 +86,35 @@
 		);
 	};
 
+	const deleteNormalMatrix = index => {
+		$$('.divDisplayMatrixContainer')
+			[index].querySelectorAll('input')
+			.forEach(input => void input.remove());
+	};
+
+	const showButtonCreateNormalMatrix = index => {
+		$$('.buttonCreateNormalMatrix')[index].style.display = 'inline-block';
+		$$('.buttonRandomNormalMatrixContainer')[index].style.display = 'none';
+		$$('.buttonDeleteNormalMatrixContainer')[index].style.display = 'none';
+	};
+
+	const resetInputNormalMatrixRowAndCol = index => {
+		$$('.inputNormalMatrixRow')[index].value = '';
+		$$('.inputNormalMatrixCol')[index].value = '';
+
+		$$('.inputNormalMatrixRow')[index].removeAttribute('readOnly');
+		$$('.inputNormalMatrixCol')[index].removeAttribute('readOnly');
+	};
+
 	const clickButtonDeleteNormalMatrixContainer = () => {
-		$$('.buttonDeleteNormalMatrixContainer').forEach((button, index) => void button.addEventListener('click', () => {}));
+		$$('.buttonDeleteNormalMatrixContainer').forEach(
+			(button, index) =>
+				void button.addEventListener('click', () => {
+					deleteNormalMatrix(index);
+					showButtonCreateNormalMatrix(index);
+					resetInputNormalMatrixRowAndCol(index);
+				})
+		);
 	};
 
 	const clickButtonCalcPlus = () => {
