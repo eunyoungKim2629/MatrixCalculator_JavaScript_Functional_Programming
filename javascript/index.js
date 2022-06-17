@@ -145,7 +145,7 @@
 
 	const confirmSameFirstRowAndSecondCol = () => {
 		//1
-		matrixHandler && $$('.inputNormalMatrixRow')[0].value !== $$('.inputNormalMatrixCol')[1].value && printModal('첫번째 행렬의 행의 값과 두번째 행렬의 열의 값을 같게 입력해주세요.');
+		matrixHandler && $$('.inputNormalMatrixRow')[1].value !== $$('.inputNormalMatrixCol')[0].value && printModal('첫번째 행렬의 열의 값과 두번째 행렬의 행의 값을 같게 입력해주세요.');
 	};
 
 	const confirmEmptyInputValues = () => {
