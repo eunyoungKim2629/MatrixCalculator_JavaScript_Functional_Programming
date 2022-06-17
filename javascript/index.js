@@ -115,6 +115,10 @@
 		$$('.inputNormalMatrixCol')[index].removeAttribute('readOnly');
 	};
 
+	const resetDivDisplayCalcMatrixContainer = () => {
+		$('.divDisplayCalcMatrixContainer').innerHTML = '';
+	};
+
 	const clickButtonDeleteNormalMatrixContainer = () => {
 		$$('.buttonDeleteNormalMatrixContainer').forEach(
 			(button, index) =>
@@ -122,6 +126,7 @@
 					deleteNormalMatrix(index);
 					showButtonCreateNormalMatrix(index);
 					resetInputNormalMatrixRowAndCol(index);
+					resetDivDisplayCalcMatrixContainer();
 				})
 		);
 	};
